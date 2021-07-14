@@ -2,9 +2,9 @@ package com.generics;
 
 public class findMax 
 {
-	public static <T extends Comparable<T>> T max(T... elements) {
-	    T max = elements[0];
-	    for (T element : elements) {
+	public static <E extends Comparable> E max(E... elements) {
+	    E max = elements[0];
+	    for (E element : elements) {
 	        if (element.compareTo(max) > 0) {
 	            max = element;
 	        }
