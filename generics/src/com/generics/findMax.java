@@ -9,7 +9,7 @@ public class findMax<E extends Comparable<E>> {
 		this.elements = elements;
 	}
 
-	public static <E extends Comparable> E comparesion(E[] elements) {
+	public static <E> E comparesion(E[] elements) {
 		Arrays.sort(elements);
 		int lenght = elements.length;
 		E max = elements[lenght - 1];

@@ -1,0 +1,17 @@
+package com.generics;
+
+import java.util.Scanner;
+
+public class  findTheMaxValue {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the number :: ");
+		int First = sc.nextInt(); 
+		int Second = sc.nextInt();
+		int Third = sc.nextInt();
+		System.out.println(First);
+		System.out.println(Second);
+		System.out.println(Third);
+	}
+}
+        

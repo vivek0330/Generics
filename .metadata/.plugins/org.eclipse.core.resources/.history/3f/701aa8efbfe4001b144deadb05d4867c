@@ -1,0 +1,51 @@
+package com.generics;
+
+import java.util.Scanner;
+
+public class findMaxNumber {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("enter the float value :: ");
+		Float firstNumber = sc.nextFloat();
+		Float secondNumber = sc.nextFloat();
+		Float thirdNumber = sc.nextFloat();
+		System.out.println("1st number is :: " + firstNumber);
+		System.out.println("2nd number is :: " + secondNumber);
+		System.out.println("3rd number is :: " + thirdNumber);
+		Float maxNumber = comparesion(firstNumber, secondNumber, thirdNumber);
+		System.out.println("Maximum value is :: " + maxNumber);
+		
+		System.out.println("enter the integer value :: ");
+		Integer first_Number = sc.nextInt();
+		Integer second_Number = sc.nextInt();
+		Integer third_Number = sc.nextInt();
+		System.out.println("1st number is :: " + firstNumber);
+		System.out.println("2nd number is :: " + secondNumber);
+		System.out.println("3rd number is :: " + thirdNumber);
+		Integer maxNumber = comparesion(first_Number, second_Number, third_Number);
+		System.out.println("Maximum value is :: " + maxNumber);
+	}
+
+	private static Float comparesion(Float firstNumber, Float secondNumber, Float thirdNumber) {
+		Float max = firstNumber;
+		if (secondNumber.compareTo(max) > 0) {
+			max = secondNumber;
+		}
+		if (thirdNumber.compareTo(max) > 0) {
+			max = thirdNumber;
+		}
+		return max;
+	}
+	
+	private static Integer comparesion(Integer firstNumber, Integer secondNumber, Integer thirdNumber) {
+		Integer max = firstNumber;
+		if (secondNumber.compareTo(max) > 0) {
+			max = secondNumber;
+		}
+		if (thirdNumber.compareTo(max) > 0) {
+			max = thirdNumber;
+		}
+		return max;
+	}
+
+}

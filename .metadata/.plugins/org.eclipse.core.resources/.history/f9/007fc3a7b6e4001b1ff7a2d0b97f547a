@@ -1,0 +1,35 @@
+package com.generics;
+
+import java.util.Scanner;
+
+public class findTheMaxValue {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		findTheMaxValue number = new findTheMaxValue();
+		System.out.println("Enter the number :: ");
+		Integer First = sc.nextInt();
+		Integer Second = sc.nextInt();
+		Integer Third = sc.nextInt();
+		System.out.println("1st number is :: " + First);
+		System.out.println("2st number is :: " + Second);
+		System.out.println("3st number is :: " + Third);
+		comparision(First, Second, Third);
+		int maxNumber = number.comparision(First, Second, Third);
+		System.out.println(maxNumber);
+	}
+
+	private static <E extends Number> E comparision(E first, E second, E third) {
+		E max = first;
+		if (second.compareTo(max) > 0) {
+			max = second;
+		}
+		if (third.compareTo(max) > 0 ) {
+			max = third;
+		}
+		return max;
+	}
+
+
+
+}

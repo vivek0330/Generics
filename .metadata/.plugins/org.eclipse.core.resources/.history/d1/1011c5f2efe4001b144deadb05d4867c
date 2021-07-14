@@ -1,0 +1,32 @@
+package com.generics;
+
+import java.lang.Array;
+import java.util.Scanner;
+
+public class findMax<E extends Comparable> {
+	E[] elements;
+
+	public findMax(E[] elements) {
+		super();
+		this.elements = elements;
+	}
+
+	public static <E extends Comparable> E comparesion(E... elements) {
+		Array.sort(elements);
+		int lenght = elements.length;
+		E max = elements[lenght - 1];
+		return max;
+	}
+
+	public static void main(String[] args) {
+		Integer[] intMax = { 1, 82, 5, 80, 4, 87, 100, 58 };
+		System.out.println("Maximum value is: " + maxOFValues(intMax));
+
+		Float[] floatMax = { 1.6f, 87.8f, 82.8f, 80.2f, 4.8f };
+		System.out.println("Maximum value is: " + maxOFValues(floatMax));
+
+		String[] stringMax = { "S", "A", "M" , "B", "M"};
+		System.out.println("Maximum value is: " + maxOFValues(stringMax));
+
+	}
+}

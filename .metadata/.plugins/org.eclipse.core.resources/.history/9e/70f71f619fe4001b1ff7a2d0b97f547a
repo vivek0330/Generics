@@ -1,0 +1,34 @@
+package com.generics;
+
+public class PrintMyArray <E> {
+	E[] myArray;
+	
+	public PrintMyArray(E[] myArray) {
+		this.myArray = myArray;
+	}
+
+	public static void main(String[] args) {
+
+		Integer[] a = { 1, 2, 3 };
+		Double[] b = { 1.1, 1.2, 1.3 };
+		Character[] c = { 'a', 'b' };
+		toPrint(a);
+		toPrint(b);
+		toPrint(c);
+		new PrintMyArray<Integer>(a).toPrint();
+	}
+
+	private void toPrint() {
+		toPrint(myArray);
+		
+	}
+
+	private static  <E> void toPrint(E[] z) {
+		for (E i : z) {
+			System.out.println(i);
+		}
+
+	}
+
+}
+       

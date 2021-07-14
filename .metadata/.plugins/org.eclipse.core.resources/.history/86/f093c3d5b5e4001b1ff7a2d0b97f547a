@@ -1,0 +1,26 @@
+package com.generics;
+
+import java.util.Scanner;
+
+public class findTheMaxValue {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the number :: ");
+		Integer First = sc.nextInt();
+		Integer Second = sc.nextInt();
+		Integer Third = sc.nextInt();
+		System.out.println("1st number is :: " + First);
+		System.out.println("2st number is :: " + Second);
+		System.out.println("3st number is :: " + Third);
+		comparision(First, Second, Third);
+	}
+
+	private static <E extends Number> void comparision(E first, E second, E third) {
+		E max = first;
+		System.out.println(max);
+	}
+
+
+
+}

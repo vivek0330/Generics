@@ -1,0 +1,24 @@
+package com.generics;
+
+public class vedio2 <E> {
+	E[] myArray;
+
+	public vedio2(E[] myArray) {
+		this.myArray = myArray;
+	}
+
+	public static void main(String[] args) {
+		Integer[] a = { 1, 2, 3 };
+		Double[] b = { 1.1, 1.2, 1.3 };
+		Character[] c = { 'a', 'b' };
+		
+		new vedio2<Interger>(a).toPrint();
+	}
+	
+	private static  <E> void toPrint(E[] z) {
+		for (E i : z) {
+			System.out.println(i);
+		}
+
+	}
+}
